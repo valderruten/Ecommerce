@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ProductInfo from "./pages/ProductInfo";
 import Purchases from "./pages/Purchases";
-import { getUserCart } from "./store/slices/cart.slice";
+// import { getUserCart } from "./store/slices/cart.slice";
 import { getAllProducts } from "./store/slices/products.slice";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getAllProducts());
-    dispatch(getUserCart());
+    
   }, []);
 
   return (
