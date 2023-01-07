@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { getUserCart } from '../../store/slices/cart.slice'
 import getConfig from '../../utils/getConfig'
 import { useDispatch } from 'react-redux'
+import "./styles/productDescription.css"
+
 const ProductDescription = ({product}) => {
 
 
@@ -34,22 +36,27 @@ const handleCart=()=>{
 }
 
   return (
-    <article>
-      <h2>{product?.title}</h2>
-      <p>{product?.description}</p>
-      <section>
-        <span>Price</span>
-        <h3>{product?.price}</h3>
-      </section>
-      <section>
-        <h3>Quantity</h3>
-        <div>
-          <div onClick={handleMinus}>-</div>
-          <div>{counter}</div>
-          <div onClick={handlePlus}>+</div>
+    <article className='product-description'>
+ 
+      <h2 className='product-description__title'>{product?.title}</h2>
+      <p className='product-description__description'>{product?.description}</p>
+      <footer className='product-description__footer' >
+        <div className='product-description__price-container'>
+        <h3 className='product-description__price-label' >Price</h3>
+        <h2 className='product-description__price-number'>{product?.price}</h2>
         </div>
-      </section>
-      <button onClick={handleCart}>Add to Cart <i className="fa-solid fa-cart-plus"></i></button>
+        <div className='product-description__quantity-container'>
+        <h3 className='product-description__quantity-label'>Quantity</h3>
+        <div className='counter'>
+          <div onClick={handleMinus} className='counter__minus'>-</div>
+          <div className='counter__number'>{counter}</div>
+          <div onClick={handlePlus} className='counter__plus'>+</div>
+        </div>
+      </div>    
+      <button className='product-description__btn' onClick={handleCart}>Add to Cart <i className="fa-solid fa-cart-plus"></i></button>
+      </footer>
+      
+     
     </article>
   )
 }

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import "./styles/login.css"
 const Login = () => {
   const navigate= useNavigate()
   const [isLogged, setIsLogged] = useState(false)
@@ -40,7 +41,7 @@ const handleLogout=()=> {
 
 if(isLogged){
   return(
-  <div>
+  <div className='login'>
      <h1>User Logged</h1>
      <button onClick={handleLogout}>Logout</button>
      </div>

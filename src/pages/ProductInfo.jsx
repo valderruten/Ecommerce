@@ -4,9 +4,11 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import CardProduct from '../components/home/CardProduct'
 import ProductDescription from '../components/ProductInfo/ProductDescription'
+import SliderImg from '../components/ProductInfo/SliderImg'
+ 
 
 
-const ProductInfo = () => {
+const   ProductInfo = () => {
 
 const{id}= useParams()
 
@@ -31,11 +33,12 @@ useEffect(() => {
 }
 }, [allProducts,product])
 
- 
-
+  
 return (
     <div>
       <ProductDescription product={product} />
+       <SliderImg listImgs={product?.productImgs} />
+         
       <section>
         <h2>Discover similar items</h2>
         <div className='similar-products-container'>
