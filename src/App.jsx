@@ -10,7 +10,6 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ProductInfo from "./pages/ProductInfo";
 import Purchases from "./pages/Purchases";
-// import { getUserCart } from "./store/slices/cart.slice";
 import { getAllProducts } from "./store/slices/products.slice";
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
+      <Routes >
         
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -1,4 +1,28 @@
-.active-link{
+/* .active-link{
     background-color: red;
     color: white;
+} */
+.header li:hover{
+    background-color: rgb(222, 222, 249);
+    
 }
+.header{
+    background-color: rgb(232, 238, 239);
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    align-items:stretch;
+}
+.header ul{
+display: flex;
+margin-left: 15px;
+
+justify-items:right;
+margin-top: 15px;
+gap: 2rem;
+padding: 0 1rem;
+font-size: large;
+flex-wrap: wrap;
+ 
+}
+
