@@ -2,10 +2,10 @@
     width: 100%;
     max-width: 500px;
     padding: 20px;
-    border: 5px solid red;
+   
     overflow: hidden;
-    position: relative;
-  }
+     position: relative;
+ }
   .slider__back,
   .slider__next {
     position: absolute;
@@ -28,11 +28,10 @@
     transform: translate(-100%, -50%);
   }
   .slider__container {
-    width: 300%;
+    width: calc(300% + 40px);
     display: flex;
     gap: 20px;
-    border: 5px solid green;
-    transition: transform 300ms ease;
+     transition: transform 300ms ease;
  
   }
   .slider__img-container {
@@ -44,4 +43,4 @@
     height: 100%;
     object-fit: contain;
   }
-  
+   
