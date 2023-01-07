@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Routes } from "react-router-dom";
+import {   Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./components/shared/Footer";
 import Header from "./components/shared/Header";
@@ -26,6 +26,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/product/:id" element={<ProductInfo />} />

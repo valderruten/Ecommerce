@@ -4,54 +4,57 @@ import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import "./styles/login.css"
-const Login = () => {
-  const navigate= useNavigate()
-  const [isLogged, setIsLogged] = useState(false)
+// import "./styles/login.css"
+import LoginForm from './LoginForm'
+ const Login = () => {
+ 
+//   const navigate= useNavigate()
+//   const [isLogged, setIsLogged] = useState(false)
 
-  const {handleSubmit, register, reset} = useForm()
+ //  const {handleSubmit, register, reset} = useForm()
 
-  const submit = data => {
-    const URL = 'https://e-commerce-api.academlo.tech/api/v1/users/login'
-    axios.post(URL, data)
-      .then(res =>{ 
-        console.log(res.data.data)
-      localStorage.setItem('token',res.data.data.token)
-      setIsLogged(true)
-      navigate('/')
-  })
-      .catch(err => console.log(err))
+  // const submit = data => {
+  //   const URL = 'https://e-commerce-api.academlo.tech/api/v1/users/login'
+  //   axios.post(URL, data)
+  //     .then(res =>{ 
+  //       console.log(res.data.data)
+  //     localStorage.setItem('token',res.data.data.token)
+  //     setIsLogged(true)
+  //     navigate('/')
+  // })
+  //     .catch(err => console.log(err))
    
-      reset({
-        email:"",
-        password:""
-      })
-  }
+  //     reset({
+  //       email:"",
+  //       password:""
+  //     })
+  // }
 
-useEffect(() => {
-  const condition= localStorage.getItem('token') ? true : false 
+// useEffect(() => {
+//   const condition= localStorage.getItem('token') ? true : false 
 
-setIsLogged(condition)
-}, [])
+// setIsLogged(condition)
+// }, [])
 
-const handleLogout=()=> {
-  localStorage.removeItem('token')
-  setIsLogged(false)
-}
+// const handleLogout=()=> {
+//   localStorage.removeItem('token')
+//   setIsLogged(false)
+// }
 
-if(isLogged){
-  return(
-  <div className='login'>
-     <h1>User Logged</h1>
-     <button onClick={handleLogout}>Logout</button>
-     </div>
+// if(isLogged){
+//   return(
+//   <main className='login'>
+//      <h1>User Logged</h1>
+//      <button onClick={handleLogout}>Logout</button>
+//      </main>
 
-  )
-}
+//   )
+// }
   return (
     <div>
-      <form onSubmit={handleSubmit(submit)}>
-        <div>
+      <main className='login'>
+      <LoginForm />
+        {/* <div>
           <label htmlFor="email">Email</label>
           <input type="text" id='email' {...register("email")} />
         </div>
@@ -59,8 +62,8 @@ if(isLogged){
           <label htmlFor="password">Password</label>
           <input type="password" id='password' {...register("password")} />
         </div>
-        <button>Login</button>
-      </form>
+        <button>Login</button> */}
+      </main>
     </div>
   )
 }
