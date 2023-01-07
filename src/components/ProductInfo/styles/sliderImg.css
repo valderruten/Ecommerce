@@ -49,4 +49,8 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .slider__border{
+    border:3px solid rgb(48, 242, 51);
+    border-radius: 5px;
+  }
    

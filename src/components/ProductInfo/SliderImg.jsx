@@ -43,7 +43,7 @@ const SliderImg = ({ listImgs }) => {
       <ul className="slider__ul ">
         {
         listImgs?.map((url,index) => (
-          <li onClick={()=>setIndexImg(index)} className="slider__img-container" key={url}>
+          <li className={`slider__img-container ${index===indexImg && 'slider__border'}`} onClick={()=>setIndexImg(index)}  key={url}>
             <img className="slider__img" src={url} alt="" />
           </li>
         ))

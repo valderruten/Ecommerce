@@ -2,11 +2,11 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { getUserCart } from '../../store/slices/cart.slice'
 import getConfig from '../../utils/getConfig'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import "./styles/productDescription.css"
 
 const ProductDescription = ({product}) => {
-
+const cart=useSelector (state=>state.cart)
 
   const [counter, setCounter] = useState(1)
 
@@ -32,7 +32,23 @@ const handleCart=()=>{
     console.log(res.data)
     dispatch (getUserCart())
    } )
-  .catch(err=>console.log(err))
+  .catch(err=>{
+    if(err.response.status === 400){
+const URLPatch= 'https://e-commerce-api.academlo.tech/api/v1/cart'      
+const prevQuantity=cart.filter(e=>e.id === product.id )[0].productsInCart.quantity
+
+const data={
+  id:product.id,
+  newQuantity:prevQuantity + counter
+}
+axios.patch(URLPatch,data,getConfig())
+.then(res=>{
+  console.log(res.data)
+  dispatch(getUserCart())
+})
+.catch(err=>console.log(err))
+    }
+  })
 }
 
   return (
