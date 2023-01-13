@@ -1,0 +1,43 @@
+.total{
+    font-weight: bold;
+    margin-left: 10px;
+    font-style: italic;
+    border-style: double;
+    width: 100px;
+    text-align: right;
+    color: blue;
+    
+}.total::before{
+   
+    content: '$';
+    margin-right: 6px;
+
+}
+.btn__checkout:hover{
+    transition: delay 0.1em; 
+  color:red;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+.btn__checkout{
+    margin-bottom: 10px;
+    cursor:pointer;
+    padding: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top:10px;
+    justify-content:space-between;
+}
+span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+section{
+  
+    max-width: 50%;
+
+}
+h2{
+ 
+    padding: 10px;
+}

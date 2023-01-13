@@ -2,8 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
+.login h1{
+  color:rgb(9, 242, 9);
+}
+.btn__logout{
+ margin-top: 5px;
+  border-radius: 3px;
+  padding: 5px;
+}
+.btn__logout:hover{
+  
+  transition: delay 0.1em; 
+  color:red;
+  font-weight: bold;
+  transform: scale(1.2);
+  
+background-color: rgb(225, 209, 240);}
 .login__form {
   width: max-content;
   box-shadow: 0 0 30px rgba(238, 78, 78, 0.333);

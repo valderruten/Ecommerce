@@ -1,0 +1,13 @@
+.btn__order{
+    background-color: rgb(214, 206, 245);
+     padding:5px;
+    display: grid;
+    margin:0;
+    justify-content: space-between;
+    font-size: large;
+}
+.btn__order:hover{
+    background-color:rgb(98, 110, 237);    
+    transition: delay 0.1em; 
+    transform: scale(1.2);
+}

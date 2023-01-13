@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Footer = () => {
   return (
-    <h1>Copyrigth ©</h1>
+    <h3>Copyrigth ©</h3>
   )
 }

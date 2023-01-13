@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartProduct from "../components/Cart/CartProduct";
 import { getUserCart, setCartGlobal } from "../store/slices/cart.slice";
 import getConfig from "../utils/getConfig";
+import"./styles/cart.css"
 
 const Cart = () => {
 
@@ -50,15 +51,15 @@ const Cart = () => {
       }
 </div>
 <footer>
-  <span>Total:</span>
-  <p>{
+  <span >Total:</span>
+  <p className="total">{
     cartProducts ?
     cartProducts.reduce((acc,cv)=>{
       return cv.price *cv.productsInCart.quantity + acc
     },0):0
     }
     </p>
-  <button onClick={handleCheckout}>Checkout</button>
+  <button className="btn__checkout" onClick={handleCheckout}>Checkout</button>
 </footer>
     </section>
   );

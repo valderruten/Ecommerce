@@ -42,7 +42,7 @@ const LoginForm = () => {
       return(
       <main className='login'>
          <h1>User Logged</h1>
-         <button onClick={handleLogout}>Logout</button>
+         <button className="btn__logout" onClick={handleLogout}>Logout</button>
          </main>
     
       )

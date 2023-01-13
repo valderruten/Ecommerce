@@ -3,3 +3,16 @@
     margin-bottom: 20px;
     border:1px solid red;
 }
+.cart-product-price::before{
+   
+        content: '$';
+        margin-right: 6px;
+   
+}
+.cart-product-delete:hover{
+    transform: scale(1.25);
+    color:red;
+    cursor: pointer;
+  transition: transform 200 ms ease;
+
+}

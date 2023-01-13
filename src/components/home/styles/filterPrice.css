@@ -1,0 +1,41 @@
+.price{
+    
+    position: relative;
+    transition: width 2s;
+    /* text-align: center; */
+    padding: 5px;
+    
+      
+}
+.price:hover{
+   transition: 3s;
+}
+ 
+.input__price{
+    display:flex;
+    max-width: 100px;
+    max-height: 35px;
+    font-size: large;
+  
+}
+.btn__search{
+    border-radius: 15%;
+    padding:5px;
+    max-width: 100px;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 100%;
+    align-items: center;
+    align-content: center;
+    position: center;
+    justify-content: center;
+   
+    
+}
+.btn__search:hover{
+   
+    background-color:rgb(98, 110, 237);    
+    transition: delay 0.1em; 
+    transform: scale(1.2);
+}

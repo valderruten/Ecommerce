@@ -1,13 +1,11 @@
+ import React, { useState } from "react";
+ import { NavLink } from "react-router-dom";
  
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+ 
  
 
 const Header = () => {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
      
       <header className="header">
@@ -48,7 +46,9 @@ const Header = () => {
                 Purchases
               </NavLink>
             </li>
+             
           </ul>
+          
         </nav>
       </header>
        

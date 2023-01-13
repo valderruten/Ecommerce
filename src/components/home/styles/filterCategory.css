@@ -1,0 +1,19 @@
+.section__main {
+  font-size: large;
+}
+.section__list-category:hover {
+  background-color: rgb(98, 110, 237);
+  color: white;
+  margin-left: 5px;
+  transition: delay 0.1em;
+  transform: scale(1.2);
+  text-align: center;
+}
+.section__list-category-items:hover {
+  background-color: rgb(98, 110, 237);
+  margin-left: 5px;
+  transition: delay 0.1em;
+  transform: scale(1.2);
+  color: white;
+  text-align: center;
+}

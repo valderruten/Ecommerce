@@ -1,9 +1,12 @@
-/* .active-link{
-    background-color: red;
-    color: white;
-} */
+
 .header li:hover{
-    background-color: rgb(222, 222, 249);
+    background-color: rgb(247, 226, 226); 
+    transition: delay 15s; 
+    transform: scale(1.1);
+    font-weight: bold;
+    text-transform: uppercase;
+   font-style: italic;
+ 
     
 }
 .header{

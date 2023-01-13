@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./styles/filterPrice.css"
 const FilterPrice = ({setInputPrice}) => {
 
     const handleSubmit=e=>{
@@ -26,18 +26,18 @@ if(inputFrom   && inputTo ) {
 
 }
   return (
-    <section>
-      <h2>Price</h2>
+    <section className="price">
+      <h2>Price </h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="from">From</label>
-          <input type="text" id="from" />
+          <label  htmlFor="from">From</label>
+          <input className="input__price" type="text" id="from" />
         </div>
         <div>
           <label htmlFor="to">To</label>
-          <input type="text" id="to" />
+          <input className="input__price" type="text" id="to" />
         </div>
-        <button>Apply</button>
+        <button className="btn__search">Search</button>
       </form>
     </section>
   );

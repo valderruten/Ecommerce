@@ -1,0 +1,19 @@
+.purchases__container {
+  max-width: 50%;
+  
+  margin: 10px;
+  
+}
+.span__price::before{
+   
+  content: '$';
+  margin-right: 6px;
+
+}
+.span__price{
+  font-style: italic;
+}
+h4{
+ 
+  padding-top: 10px;
+}
